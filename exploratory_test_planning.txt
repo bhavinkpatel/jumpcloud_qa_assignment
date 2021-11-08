@@ -1,0 +1,53 @@
+﻿* Initial questions, thoughts, to-dos, followups
+   * How can you verify calls in curl?
+      * Run commands with -v to see status codes
+* Test Cases / AC
+   * QUESTION: How long will the application wait for incoming connections? 
+   * QUESTION: Does the application ever timeout?
+   * QUESTION: Can you update the timeout value, if available?
+   * QUESTION: If it does timeout, how so?
+      * Does it shutdown entirely? 
+      * Does it remain on, but reject all incoming requests? 
+   * Application should respond to the specific port environment variable
+   * Application should not respond to the specific port environment variable if passing a different port value
+   * A Post to /hash in the correct format will return an identifier immediately
+   * A Post to /hash will wait 5 seconds to compute the hash in SHA512 
+      * This should be a timed request to ensure that it takes a total of 5 for the request to complete
+   * What happens if you submit different forms of the password?
+      * Valid
+      * Invalid
+      * ALL CAPS of the same password
+   * What happens if you submit the same password?
+   * The hashing algorithm should be in SHA512 
+      * How to verify this?!
+   * A Get to /hash should accept a valid identifier 
+   * Submit a invalid identifier to GET /hash
+   * Verify it is base64 encoded from an original POST
+   * Get /stats
+      * Can you attempt to submit data in the request
+      * Total requests count
+         * Check manually by tracking requests made
+         * What requests are counted here?
+      * Average time?
+         * How to time requests?
+         * Log each command > total > calculate average > verify 
+      * Should return valid JSON format
+   * Processing multiple requests?
+      * How can you send multiple request in curl? 
+   * No additional password requests should be allowed when shutdown is pending. 
+      * Send shutdown, send new password 
+      * Or send timed shutdown? Then send requests to verify? 
+   * Does any other action/command trigger a request count +1
+   * Is the total requests counting correctly
+      * Any ways to manipulate that or try to break it? 
+         * Many simultaneous requests - does it count correctly? Are each requests successful 
+   * Does it count bad requests?
+   * Can you update a password
+   * Can you delete a password at /hash/x
+   * Does sending the same password create a new identifier 
+      * Camelcasing password
+      * All caps
+   * /1/2/3/4/5/6 in the url only returns the last indeifinter encoded password
+      * This shouldn’t work? 
+   * Authentication on the application?
+      * Can you bypass it?
