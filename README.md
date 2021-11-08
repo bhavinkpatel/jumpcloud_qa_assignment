@@ -6,3 +6,5 @@ I opted to create each test scenario as its own issue. Each issue then has relev
 Issues are here: https://github.com/bhavinkpatel/jumpcloud_qa_assignment/issues
 
 The project is here: https://github.com/bhavinkpatel/jumpcloud_qa_assignment/projects/2
+
+I've also included an exploratory test planning file. This file is my 'test planning' as I was reading the assignment specifications and also testing the application side-by-side. This file is just thrown together thoughts and notes, which were then transferred to the Issues. 
