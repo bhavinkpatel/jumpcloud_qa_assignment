@@ -1,4 +1,5 @@
-# JumpCloud QA Assignment / Bhavin Patel / November 2021
+# JumpCloud QA Assignment
+## Bhavin Patel, November 2021
 
 ### Submission Details
 
